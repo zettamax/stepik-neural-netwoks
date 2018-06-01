@@ -1,0 +1,11 @@
+version: '3'
+services:
+  sympy_stepik:
+    tty: true
+    container_name: sympy_stepik
+    image: jupyter/scipy-notebook
+    ports:
+      - 8888:8888
+    volumes:
+    - .:/home/jovyan/work
+    entrypoint: bash work/helper.sh
